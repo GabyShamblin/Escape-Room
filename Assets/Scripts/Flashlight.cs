@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Flashlight : MonoBehaviour
 {
-    public Material lens;
-
     private Light _light;
     private AudioSource _audioSource;
 
@@ -17,14 +15,12 @@ public class Flashlight : MonoBehaviour
     public void LightOn()
     {
         _audioSource.Play();
-        lens.EnableKeyword("_EMISSION");
         _light.enabled = true;
     }
 
     public void LighOff()
     {
         _audioSource.Play();
-        lens.DisableKeyword("_EMISSION");
         _light.enabled = false;
         
     }
