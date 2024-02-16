@@ -20,7 +20,7 @@ public class DebugController : MonoBehaviour
    public static bool VRDisplayIsPresent()
    {
        var xrDisplaySubsystems = new List<XRDisplaySubsystem>();
-       SubsystemManager.GetInstances<XRDisplaySubsystem>(xrDisplaySubsystems);
+       SubsystemManager.GetSubsystems<XRDisplaySubsystem>(xrDisplaySubsystems);
        foreach (var xrDisplay in xrDisplaySubsystems)
        {
            if (xrDisplay.running)
