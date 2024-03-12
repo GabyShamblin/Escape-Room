@@ -19,7 +19,7 @@ public class Key_hole : MonoBehaviour
             Key.SetActive(false);
             Hole.SetActive(false);
             Mirror.SetActive(false);
-            Door.SetActive(false);
+            Door.transform.eulerAngles = new Vector3 (0,90,0); 
             Debug.Log("Correct Placement!");
 
         }
