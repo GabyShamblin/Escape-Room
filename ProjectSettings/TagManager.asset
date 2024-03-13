@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ignite
+  - Cube
+  - Sphere
+  - Star
+  - Triangle
   layers:
   - Default
   - TransparentFX
