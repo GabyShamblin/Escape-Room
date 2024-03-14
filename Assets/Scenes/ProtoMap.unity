@@ -22909,10 +22909,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 845779577}
-    - targetCorrespondingSourceObject: {fileID: 5362895397313196842, guid: 8b456a21699676a4b94bd6288356bf89,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 845779578}
   m_SourcePrefab: {fileID: 100100000, guid: 8b456a21699676a4b94bd6288356bf89, type: 3}
 --- !u!4 &825638575 stripped
 Transform:
@@ -23280,23 +23276,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2314576, y: 2.132371, z: 0.34589863}
   m_Center: {x: -0.588558, y: 1.1175504, z: 0.048878364}
---- !u!114 &845779578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845779573}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05ec57bdabeb383438be0ebee35822f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  door: {fileID: 845779573}
-  openRot: 90
-  closeRot: 0
-  speed: 2
-  opening: 1
 --- !u!1 &848500869
 GameObject:
   m_ObjectHideFlags: 0
