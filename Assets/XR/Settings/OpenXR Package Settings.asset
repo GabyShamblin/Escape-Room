@@ -15,6 +15,7 @@ MonoBehaviour:
   features: []
   m_renderMode: 1
   m_depthSubmissionMode: 0
+  m_symmetricProjection: 0
 --- !u!114 &-8634107305266939510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +140,22 @@ MonoBehaviour:
   required: 0
   cacheSize: 1048576
   perThreadCacheSize: 51200
+--- !u!114 &-6218364369230468485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a1f07dc5afe854f9f12a4194aca3fb, type: 3}
+  m_Name: WebGL
+  m_EditorClassIdentifier: 
+  features: []
+  m_renderMode: 1
+  m_depthSubmissionMode: 0
+  m_symmetricProjection: 0
 --- !u!114 &-5994795737221800890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,6 +368,10 @@ MonoBehaviour:
     manifestName: cambria
     enabled: 1
   forceRemoveInternetPermission: 1
+  symmetricProjection: 0
+  systemSplashScreen: {fileID: 0}
+  lateLatchingMode: 0
+  lateLatchingDebug: 0
 --- !u!114 &-3659258295437068895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,12 +585,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f0ebc320a151d3408ea1e9fce54d40e, type: 3}
   m_Name: OpenXR Package Settings
   m_EditorClassIdentifier: 
-  Keys: 0100000004000000070000000e000000
+  Keys: 0100000004000000070000000e0000000d000000
   Values:
   - {fileID: 1381609086443634817}
   - {fileID: -8901289863736462141}
   - {fileID: 14459712546615552}
   - {fileID: 2043764890065270335}
+  - {fileID: -6218364369230468485}
 --- !u!114 &14459712546615552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,6 +621,7 @@ MonoBehaviour:
   - {fileID: 458106859645397975}
   m_renderMode: 1
   m_depthSubmissionMode: 0
+  m_symmetricProjection: 0
 --- !u!114 &458106859645397975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,6 +675,7 @@ MonoBehaviour:
   - {fileID: -2198696606823709367}
   m_renderMode: 1
   m_depthSubmissionMode: 0
+  m_symmetricProjection: 0
 --- !u!114 &1467059702947572273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,6 +726,7 @@ MonoBehaviour:
   - {fileID: 6087149983848199578}
   m_renderMode: 1
   m_depthSubmissionMode: 0
+  m_symmetricProjection: 0
 --- !u!114 &2370371501247390995
 MonoBehaviour:
   m_ObjectHideFlags: 0
