@@ -677,7 +677,6 @@ MonoBehaviour:
   m_Name: OpenXR Package Settings
   m_EditorClassIdentifier: 
   Keys: 0100000004000000070000000e000000
-  Keys: 0100000004000000070000000e000000
   Values:
   - {fileID: 1381609086443634817}
   - {fileID: -8901289863736462141}
