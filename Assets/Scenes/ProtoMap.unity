@@ -30167,7 +30167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: viewableObject
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 1057925064}
+=======
+      objectReference: {fileID: 1384360754}
+>>>>>>> Stashed changes
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -49539,9 +49543,96 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a93a187d59e754489a18bedd386a3ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Candy: {fileID: 1381331613}
   Mouth: {fileID: 2093849067}
   Lit_Skull: {fileID: 684868341}
+=======
+--- !u!1001 &1384360753
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 452100745741380936, guid: a847bc8ef6e167248892356b5f6efec3,
+        type: 3}
+      propertyPath: _Key
+      value: 
+      objectReference: {fileID: 1783733654}
+    - target: {fileID: 452100745741380936, guid: a847bc8ef6e167248892356b5f6efec3,
+        type: 3}
+      propertyPath: _audio
+      value: 
+      objectReference: {fileID: 636763025}
+    - target: {fileID: 8076729445299116436, guid: a847bc8ef6e167248892356b5f6efec3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.354014
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076729445299116436, guid: a847bc8ef6e167248892356b5f6efec3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.411928
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076729445299116436, guid: a847bc8ef6e167248892356b5f6efec3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.389288
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076729445299116436, guid: a847bc8ef6e167248892356b5f6efec3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.84341484
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076729445299116436, guid: a847bc8ef6e167248892356b5f6efec3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.14871678
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076729445299116436, guid: a847bc8ef6e167248892356b5f6efec3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5084267
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076729445299116436, guid: a847bc8ef6e167248892356b5f6efec3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.08964932
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076729445299116436, guid: a847bc8ef6e167248892356b5f6efec3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 9.189
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076729445299116436, guid: a847bc8ef6e167248892356b5f6efec3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -63.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076729445299116436, guid: a847bc8ef6e167248892356b5f6efec3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -17.841
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078507502380766098, guid: a847bc8ef6e167248892356b5f6efec3,
+        type: 3}
+      propertyPath: m_Name
+      value: lowpoly_earth(Globe)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a847bc8ef6e167248892356b5f6efec3, type: 3}
+--- !u!1 &1384360754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8078507502380766098, guid: a847bc8ef6e167248892356b5f6efec3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1384360753}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!1 &1387219895
 GameObject:
   m_ObjectHideFlags: 0
