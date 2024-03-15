@@ -12,6 +12,7 @@ public class SkullViewInteractionController : MonoBehaviour
     public GameObject cypherSolvedCanvas;
     public GameObject orangePaint;
     public Material newMaterial;
+    public GameObject redTextCanvas;
     private GameObject _skull;
     private bool _isSolved;
     /// <summary>
@@ -35,7 +36,7 @@ public class SkullViewInteractionController : MonoBehaviour
             encryptedCanvas.SetActive(false);
             decryptedCanvas.SetActive(false);
             cypherSolvedCanvas.SetActive(true);
-
+            redTextCanvas.SetActive(true);
             _isSolved = true;
         }
         else
