@@ -1,0 +1,18 @@
+﻿using UnityEngine;
+
+[ExecuteInEditMode]
+/// <summary>
+/// Creates a spotlight that will illuminate a material
+/// </summary>
+public class Reveal : MonoBehaviour
+{
+    [SerializeField] Material Mat;
+    [SerializeField] Light SpotLight;
+	
+	void Update ()
+    {
+        Mat.SetVector("MyLightPosition",  SpotLight.transform.position);
+        Mat.SetVector("MyLightDirection", -SpotLight.transform.forward );
+        Mat.SetFloat ("MyLightAngle", SpotLight.spotAngle         );
+    }
+}

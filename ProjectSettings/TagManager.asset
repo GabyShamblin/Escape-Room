@@ -5,11 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ignite
+  - Cube
+  - Sphere
+  - Star
+  - Triangle
+  - Cauldron
+  - Potions
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - DeactivateCube
   - Water
   - UI
   - 
