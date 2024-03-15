@@ -18604,6 +18604,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 475181176}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &475181178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8264468213022692365, guid: 369456f238c2221498ccdf16df24b160,
+    type: 3}
+  m_PrefabInstance: {fileID: 475181176}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &478867757 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5362895397313196842, guid: 8b456a21699676a4b94bd6288356bf89,
@@ -29259,6 +29265,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 684868339}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &684868341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8264468213022692365, guid: 369456f238c2221498ccdf16df24b160,
+    type: 3}
+  m_PrefabInstance: {fileID: 684868339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &688223696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32335,9 +32347,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a93a187d59e754489a18bedd386a3ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Candy: {fileID: 0}
-  Mouth: {fileID: 0}
-  Lit_Skull: {fileID: 0}
+  Candy: {fileID: 766997322}
+  Mouth: {fileID: 1239245741}
+  Lit_Skull: {fileID: 475181178}
 --- !u!1001 &768285947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36698,9 +36710,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5948f7d12d0ca67468f546bf9dac126f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Candle_L: {fileID: 1697275054}
-  Candle_M: {fileID: 1585793721}
-  Candle_R: {fileID: 1510143725}
+  Candle_L: {fileID: 684868341}
+  Candle_M: {fileID: 475181178}
+  Candle_R: {fileID: 1924170280}
   Key: {fileID: 823198298}
   Lantern: {fileID: 1898199243064780472}
 --- !u!1001 &914073484
@@ -49256,9 +49268,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a93a187d59e754489a18bedd386a3ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Candy: {fileID: 0}
-  Mouth: {fileID: 0}
-  Lit_Skull: {fileID: 0}
+  Candy: {fileID: 1327478686}
+  Mouth: {fileID: 1192932962}
+  Lit_Skull: {fileID: 1924170280}
 --- !u!1001 &1332570005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50346,9 +50358,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a93a187d59e754489a18bedd386a3ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Candy: {fileID: 0}
-  Mouth: {fileID: 0}
-  Lit_Skull: {fileID: 0}
+  Candy: {fileID: 1381331613}
+  Mouth: {fileID: 2093849067}
+  Lit_Skull: {fileID: 684868341}
 --- !u!1001 &1384360753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64149,12 +64161,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1510143723}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1510143725 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5250659286268021285, guid: 5cd97b84979069440ad59df73c135724,
-    type: 3}
-  m_PrefabInstance: {fileID: 1510143723}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1518572632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71152,12 +71158,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1585793719}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1585793721 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5250659286268021285, guid: 5cd97b84979069440ad59df73c135724,
-    type: 3}
-  m_PrefabInstance: {fileID: 1585793719}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1588273086 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3871127027741026049, guid: 0a7f51b5f4ba6294a889f661114da0d3,
@@ -74522,12 +74522,6 @@ PrefabInstance:
 --- !u!4 &1697275053 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4870016694672478367, guid: 5cd97b84979069440ad59df73c135724,
-    type: 3}
-  m_PrefabInstance: {fileID: 1697275052}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1697275054 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5250659286268021285, guid: 5cd97b84979069440ad59df73c135724,
     type: 3}
   m_PrefabInstance: {fileID: 1697275052}
   m_PrefabAsset: {fileID: 0}
@@ -85009,6 +85003,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1924170278}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1924170280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8264468213022692365, guid: 369456f238c2221498ccdf16df24b160,
+    type: 3}
+  m_PrefabInstance: {fileID: 1924170278}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1926585229
 GameObject:
   m_ObjectHideFlags: 0
@@ -87872,10 +87872,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10075a723543714d9b43273820562b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: {fileID: 0}
-  Hole: {fileID: 0}
-  Mirror: {fileID: 0}
-  Door: {fileID: 0}
+  Key: {fileID: 823198298}
+  Hole: {fileID: 2051582574}
+  Mirror: {fileID: 862399699}
+  Door: {fileID: 478867757}
 --- !u!65 &2051582577
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -91005,6 +91005,11 @@ PrefabInstance:
     - target: {fileID: 7123321439555565804, guid: 3ed15b629ea30fe4f9f9faddaf63b1d3,
         type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498621675873314680, guid: 3ed15b629ea30fe4f9f9faddaf63b1d3,
+        type: 3}
+      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7927897601338742525, guid: 3ed15b629ea30fe4f9f9faddaf63b1d3,
