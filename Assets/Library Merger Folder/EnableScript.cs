@@ -7,18 +7,24 @@ public class EnableScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+	// Disables the DoorController component attached to the same GameObject when the game starts
 	this.GetComponent<DoorController>().enabled=false;
     }
 
+    // This function is called when another collider enters the trigger collider attached to this GameObject
     void OnTriggerEnter(Collider other)
     {
+        // Checks if the name of the GameObject entering the trigger is "Key_Golden"
         if(other.gameObject.name == "Key_Golden")
 	{
+	     // Enables the DoorController component attached to the same GameObject when the "Key_Golden" enters the trigger
              this.GetComponent<DoorController>().enabled=true;
 	}
 	else
         {
+	    // Outputs a debug message indicating that a collision is not occurring
             Debug.Log("Collision is NOT happening.");
+	    // Outputs the name of the GameObject that collided with the trigger
 	    Debug.Log(other.gameObject.name);
         }        
     }
