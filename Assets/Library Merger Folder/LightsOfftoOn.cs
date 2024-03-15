@@ -4,25 +4,31 @@ using UnityEngine;
 
 public class LightsOfftoOn : MonoBehaviour
 {
+    // Reference to the parent GameObject containing the lights
     [SerializeField] GameObject _lightParent;
-    //[SerializeField] GameObject _globe;
+    
     void Start()
     {
+	// Deactivates the parent GameObject containing the lights when the game starts
 	_lightParent.SetActive(false);
-        //_globe.SetActive(false);
     }
+
+    // This function is called when another collider enters the trigger collider attached to this GameObject
     void OnTriggerEnter(Collider other)
     {
-       //Debug.Log(_lightParent.activeSelf);
+        // Checks if the name of the GameObject entering the trigger is "Direct Interactor"
 	if(other.gameObject.name == "Direct Interactor")
 	{
+	     // Outputs a console message indicating that a collision is happening
 	     Debug.Log("Collision is happening.");
+	     // Activate the parent GameObject containing the lights
 	     _lightParent.SetActive(true);
-             //_globe.SetActive(true);
-	}
+        }
 	else
         {
+	    // Outputs a console message indicating that a collision is not happening
             Debug.Log("Collision is NOT happening.");
+	    // Outputs the name of the GameObject that collided with the trigger
 	    Debug.Log(other.gameObject.name);
         }        
     }
