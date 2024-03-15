@@ -2,6 +2,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/// <summary>
+/// For the cipher board, check that material and shape match in order to mark cipher partially solved.  Once all the correct shapes and colors are on the board, the cipher is decrypted.
+/// </summary>
 public class MaterialTagChecker : MonoBehaviour
 {
     public XRSocketInteractor socketInteractor; // Reference to the XR Socket Interactor.
@@ -12,14 +15,18 @@ public class MaterialTagChecker : MonoBehaviour
     public TextMeshProUGUI encryptedText; // Partial encrypted text
     public TextMeshProUGUI decryptedText; // Partial decrypted text
     public AudioSource correctSoundEffect; // sound effect for getting a shape/color right
+    /// <summary>
+    /// intialize XR socket listeners
+    /// </summary>
     void Start()
     {
         socketInteractor.selectEntered.AddListener(OnSelectEntered);
         socketInteractor.selectExited.AddListener(OnSelectExited);
         decryptedText.enabled = false;
     }
-
-    // Verify that the obejct in the socket is the correct shape and color
+    /// <summary>
+    /// Verify that the object in the socket is the correct shape and color
+    /// </summary>
     private void OnSelectEntered(SelectEnterEventArgs args)
     {
         var interactableObject = args.interactableObject.transform.gameObject; // Get the attached object.
@@ -35,8 +42,9 @@ public class MaterialTagChecker : MonoBehaviour
             decryptedText.enabled = true;
         }
     }
-
-    // Undo the color change if the object is removed from a socket
+    /// <summary>
+    /// Undo the color change if the object is removed from a socket
+    /// </summary>
     private void OnSelectExited(SelectExitEventArgs args)
     {
         var interactableObject = args.interactableObject.transform.gameObject; // Get the detached object.
@@ -45,7 +53,9 @@ public class MaterialTagChecker : MonoBehaviour
         encryptedText.enabled = true;
         decryptedText.enabled = false;
     }
-
+    /// <summary>
+    /// Remove listeners to avoid memory leaks
+    /// </summary>
     private void OnDestroy()
     {
         // Unsubscribe to prevent memory leaks.
