@@ -10,7 +10,7 @@ public class Lantern : MonoBehaviour
 {
     private Light _light;
 
-    
+    //Finds light component
     void Start()
     {
         _light = GetComponentInChildren<Light>();

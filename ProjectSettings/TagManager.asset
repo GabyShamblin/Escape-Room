@@ -9,12 +9,13 @@ TagManager:
   - Sphere
   - Star
   - Triangle
-  - CollisionTarget
+  - Cauldron
+  - Potions
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - DeactivateCube
   - Water
   - UI
   - 
