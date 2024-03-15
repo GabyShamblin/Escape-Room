@@ -9,6 +9,7 @@ TagManager:
   - Sphere
   - Star
   - Triangle
+  - CollisionTarget
   layers:
   - Default
   - TransparentFX
