@@ -31011,6 +31011,11 @@ PrefabInstance:
       objectReference: {fileID: 734379994}
     - target: {fileID: 7984281258249907268, guid: 41307becb3725b649937d2916e336a6f,
         type: 3}
+      propertyPath: redTextCanvas
+      value: 
+      objectReference: {fileID: 734379994}
+    - target: {fileID: 7984281258249907268, guid: 41307becb3725b649937d2916e336a6f,
+        type: 3}
       propertyPath: viewableObject
       value: 
       objectReference: {fileID: 1384360755}
@@ -71717,6 +71722,7 @@ MonoBehaviour:
   cypherSolvedCanvas: {fileID: 943635400}
   orangePaint: {fileID: 722661947}
   newMaterial: {fileID: 2100000, guid: 8246134d348ab2a4297876e39c367725, type: 2}
+  redTextCanvas: {fileID: 734379994}
 --- !u!114 &1588273092
 MonoBehaviour:
   m_ObjectHideFlags: 0
