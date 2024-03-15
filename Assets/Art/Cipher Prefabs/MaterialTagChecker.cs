@@ -11,7 +11,7 @@ public class MaterialTagChecker : MonoBehaviour
     public Material defaultMaterial; // Default material to revert to.
     public TextMeshProUGUI encryptedText; // Partial encrypted text
     public TextMeshProUGUI decryptedText; // Partial decrypted text
-    
+    public AudioSource correctSoundEffect; // sound effect for getting a shape/color right
     void Start()
     {
         socketInteractor.selectEntered.AddListener(OnSelectEntered);
@@ -26,6 +26,9 @@ public class MaterialTagChecker : MonoBehaviour
 
         if (interactableObject.CompareTag(correctTag) && interactableObject.GetComponent<Renderer>().sharedMaterial.color == correctMaterial.color)
         {
+            // play sound effect
+            correctSoundEffect.Play();
+            
             // Change the material to the new one if they match
             interactableObject.GetComponent<Renderer>().material = newMaterial;
             encryptedText.enabled = false;
