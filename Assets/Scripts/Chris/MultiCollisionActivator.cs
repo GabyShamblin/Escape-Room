@@ -1,22 +1,23 @@
 using UnityEngine;
 
+/// <summary>
+/// Defines tag "Potions" and "Cauldron" and creates a counter that counts how often the potions collide with the cauldron.
+/// If 2 objects tagged "Potions" collide with the cauldron, spawn the paint barrels.
+/// </summary>
 public class MultiCollisionActivator : MonoBehaviour
 {
-    public GameObject objectToActivate;
-    public string collisionObjectTag = "CollisionObjects";
-    public string collisionTargetTag = "CollisionTarget";
+    [HideInInspector]public string collisionObjectTag = "Potions";
+    [HideInInspector]public string collisionTargetTag = "Cauldron";
 
     private int collisionsDetected = 0;
+    public GameObject redPaintBarrel;
 
-    //Counts how many collision objects have collided with the target
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag(collisionTargetTag))
-        {
-            collisionsDetected++;
-        }
-    }
+    public GameObject orangePaintBarrel;
 
+    public GameObject greenPaintBarrel;
+
+    public GameObject bluePaintBarrel;
+    
     //Activates an object when 3 or more collision objects collide with the target
     private void OnCollisionEnter(Collision collision)
     {
@@ -25,9 +26,12 @@ public class MultiCollisionActivator : MonoBehaviour
             collisionsDetected++;
         }
 
-        if (collisionsDetected >= 3)
+        if (collisionsDetected >= 2)
         {
-            objectToActivate.SetActive(true);
+            redPaintBarrel.SetActive(true);
+            orangePaintBarrel.SetActive(true);
+            greenPaintBarrel.SetActive(true);
+            bluePaintBarrel.SetActive(true);
         }
     }
 }
