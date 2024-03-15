@@ -2,9 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// General class containing static methods for handling interactions
+/// </summary>
 public class InteractionHandler : MonoBehaviour
 {
+    /// <summary>
+    /// Return true if two objects are facing eachother on the Z-axis
+    /// </summary>
     public static bool AreFacingEachOther(GameObject object1, GameObject object2)
     {
         float facingThreshold = 45f;
@@ -29,6 +34,9 @@ public class InteractionHandler : MonoBehaviour
         }
         return false;
     }
+    /// <summary>
+    /// Return true if two objects are colliding
+    /// </summary>
     public static bool AreColliding(GameObject object1, GameObject object2)
     {
         // Check if both objects and their colliders are not null

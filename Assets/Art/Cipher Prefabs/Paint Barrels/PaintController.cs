@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Control painting certain objects to solve the cipher puzzle
+/// </summary>
 public class SkullPaintController : MonoBehaviour
 {
     
@@ -16,7 +19,9 @@ public class SkullPaintController : MonoBehaviour
     private MeshRenderer _orangePaintMeshRenderer;
     private MeshRenderer _skullMeshRenderer;
 
-    // Update is called once per frame
+    /// <summary>
+    /// Initialize paint renderers
+    /// </summary>
     private void Start()
     {
         _objectToPaint = gameObject;
@@ -27,7 +32,9 @@ public class SkullPaintController : MonoBehaviour
         _redPaintMeshRenderer = redPaint.GetComponent<MeshRenderer>();
     }
 
-    // Check if the object is colliding with a paint object and change it's material if so
+    /// <summary>
+    /// Check for collisions and paint the object
+    /// </summary>
     void Update()
     {
         if (InteractionHandler.AreColliding(_objectToPaint, redPaint))
