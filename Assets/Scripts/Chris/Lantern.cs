@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Creates 
+/// Creates functionality for turning the flashlight on and off using Unity's Event system and the XR Grab Interactable Component
 /// </summary>
-/// 
 public class Lantern : MonoBehaviour
 {
     private Light _light;

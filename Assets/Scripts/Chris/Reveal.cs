@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
 [ExecuteInEditMode]
+/// <summary>
+/// Creates a spotlight that will illuminate a material
+/// </summary>
 public class Reveal : MonoBehaviour
 {
     [SerializeField] Material Mat;
