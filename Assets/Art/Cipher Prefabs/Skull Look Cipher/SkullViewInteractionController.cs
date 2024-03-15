@@ -12,14 +12,14 @@ public class SkullViewInteractionController : MonoBehaviour
     public Material newMaterial;
     private GameObject _skull;
     private bool _isSolved;
-    // Start is called before the first frame update
+
     void Start()
     {
         _skull = gameObject;
         _isSolved = false;
     }
 
-    // Update is called once per frame
+    // Check if the skull is looking in the same direction as the viewable object and mark puzzle solved if true
     void Update()
     {
         if (_isSolved) return;

@@ -27,6 +27,7 @@ public class SkullPaintController : MonoBehaviour
         _redPaintMeshRenderer = redPaint.GetComponent<MeshRenderer>();
     }
 
+    // Check if the object is colliding with a paint object and change it's material if so
     void Update()
     {
         if (InteractionHandler.AreColliding(_objectToPaint, redPaint))

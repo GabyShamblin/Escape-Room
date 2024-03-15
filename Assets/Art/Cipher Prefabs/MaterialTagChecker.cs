@@ -9,34 +9,31 @@ public class MaterialTagChecker : MonoBehaviour
     public string correctTag; // The correct tag to check for.
     public Material newMaterial; // New material to apply if conditions are met.
     public Material defaultMaterial; // Default material to revert to.
-    public TextMeshProUGUI encryptedText;
-    public TextMeshProUGUI decryptedText;
+    public TextMeshProUGUI encryptedText; // Partial encrypted text
+    public TextMeshProUGUI decryptedText; // Partial decrypted text
+    
     void Start()
     {
-        // Subscribe to the select entered and exited events.
         socketInteractor.selectEntered.AddListener(OnSelectEntered);
         socketInteractor.selectExited.AddListener(OnSelectExited);
         decryptedText.enabled = false;
     }
 
+    // Verify that the obejct in the socket is the correct shape and color
     private void OnSelectEntered(SelectEnterEventArgs args)
     {
         var interactableObject = args.interactableObject.transform.gameObject; // Get the attached object.
-        // Check if the object's tag and material match the correct ones.
-        Debug.Log("IO - " + interactableObject.CompareTag(correctTag));
-        Debug.Log("first - " + interactableObject.GetComponent<Renderer>().sharedMaterial.color);
-        Debug.Log("second - " + correctMaterial.color);
 
-        Debug.Log("mat - " + (interactableObject.GetComponent<Renderer>().sharedMaterial.color == correctMaterial.color));
         if (interactableObject.CompareTag(correctTag) && interactableObject.GetComponent<Renderer>().sharedMaterial.color == correctMaterial.color)
         {
-            // Change the material to the new one.
+            // Change the material to the new one if they match
             interactableObject.GetComponent<Renderer>().material = newMaterial;
             encryptedText.enabled = false;
             decryptedText.enabled = true;
         }
     }
 
+    // Undo the color change if the object is removed from a socket
     private void OnSelectExited(SelectExitEventArgs args)
     {
         var interactableObject = args.interactableObject.transform.gameObject; // Get the detached object.
