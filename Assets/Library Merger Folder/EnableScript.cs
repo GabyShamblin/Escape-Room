@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Enables the DoorController component when a specified collider enters the trigger collider attached to this GameObject.
+/// </summary>
 public class EnableScript : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -11,11 +14,14 @@ public class EnableScript : MonoBehaviour
         this.GetComponent<DoorController>().enabled = false;
     }
 
-    // This function is called when another collider enters the trigger collider attached to this GameObject
+    /// <summary>
+    /// Called when another collider enters the trigger collider attached to this GameObject.
+    /// </summary>
+    /// <param name="other">The collider that entered the trigger.</param>
     void OnTriggerEnter(Collider other)
     {
-	// Checking if the name of the GameObject entering the trigger is "Key_Golden"
-        if(other.gameObject.name == "Key_Golden")
+        // Checking if the name of the GameObject entering the trigger is "Key_Golden"
+        if (other.gameObject.name == "Key_Golden")
         {
             // Enable the DoorController component attached to the same GameObject when the "Key_Golden" enters the trigger
             this.GetComponent<DoorController>().enabled = true;
@@ -26,6 +32,7 @@ public class EnableScript : MonoBehaviour
             Debug.Log("Collision is NOT happening.");
             // Outputting the name of the GameObject that collided with the trigger
             Debug.Log(other.gameObject.name);
-        }        
+        }
     }
 }
+
