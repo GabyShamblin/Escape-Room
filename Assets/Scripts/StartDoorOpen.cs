@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartBasementOpen : MonoBehaviour
+public class StartDoorOpen : MonoBehaviour
 {
     [SerializeField] private bool open = false;
+    [SerializeField] private bool basement = true;
     private Animator anim;
     [SerializeField] private GameObject key;
     [SerializeField] private Material key_mat;
@@ -25,9 +26,17 @@ public class StartBasementOpen : MonoBehaviour
     void Update()
     {
         if (open & anim != null) {
-            key.GetComponent<MeshRenderer>().material = key_mat;
-            anim.Play("Base Layer.Basement_Open");
+            OpenDoor();
             open = false;
+        }
+    }
+
+    public void OpenDoor() {
+        key.GetComponent<MeshRenderer>().material = key_mat;
+        if (basement) {
+            anim.Play("Base Layer.Basement_Open");
+        } else {
+            anim.Play("Base Layer.Exit_Open");
         }
     }
 }
