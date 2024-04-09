@@ -4,26 +4,29 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Ignite
   - Cube
-  - Triangle
-  - Star
   - Sphere
+  - Star
+  - Triangle
+  - Cauldron
+  - Potions
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - DeactivateCube
   - Water
   - UI
   - 
   - 
+  - Grabbable
+  - Hands
+  - Teleporter
+  - NoHandCollide
   - Basement
   - Library
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Living Room
   - 
   - 
   - 
