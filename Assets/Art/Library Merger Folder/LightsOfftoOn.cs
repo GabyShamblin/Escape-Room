@@ -11,6 +11,7 @@ public class LightsOfftoOn : MonoBehaviour
     /// Reference to the parent GameObject containing the lights.
     /// </summary>
     [SerializeField] GameObject _lightParent;
+    public GameObject _lightAudio;
 
     /// <summary>
     /// Deactivates the parent GameObject containing the lights when the game starts.
@@ -34,6 +35,7 @@ public class LightsOfftoOn : MonoBehaviour
             Debug.Log("Collision is happening.");
             // Activate the parent GameObject containing the lights
             _lightParent.SetActive(true);
+            _lightAudio.SetActive(true);
         }
         else
         {
