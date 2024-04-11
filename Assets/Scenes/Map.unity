@@ -32485,6 +32485,7 @@ Transform:
   - {fileID: 636763026}
   - {fileID: 924996201}
   - {fileID: 1384360754}
+  - {fileID: 1703257836}
   - {fileID: 6982285255691912114}
   - {fileID: 348952412}
   - {fileID: 106965129}
@@ -60254,7 +60255,7 @@ Light:
     serializedVersion: 2
     m_Bits: 28471
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -65505,6 +65506,7 @@ MonoBehaviour:
   orangePaint: {fileID: 722661947}
   newMaterial: {fileID: 2100000, guid: 8246134d348ab2a4297876e39c367725, type: 2}
   redTextCanvas: {fileID: 734379994}
+  audio: {fileID: 0}
 --- !u!114 &1588273092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68534,12 +68536,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703257834}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 885043213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1704731513
 PrefabInstance:
@@ -109701,7 +109703,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 2
@@ -117444,4 +117446,3 @@ SceneRoots:
   - {fileID: 1978344652}
   - {fileID: 1167348577}
   - {fileID: 1941771228}
-  - {fileID: 1703257836}
