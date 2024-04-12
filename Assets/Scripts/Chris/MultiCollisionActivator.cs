@@ -12,7 +12,7 @@ public class MultiCollisionActivator : MonoBehaviour
      [SerializeField]protected GameObject smoke;
     [SerializeField]protected MeshRenderer emptyCauldron;
     [SerializeField]protected MeshRenderer fullCauldron;
-   
+    protected int collisionsDetected = 0;
 
     /// <summary>
     /// Checks to see if the item colliding with the cauldron is the red or blue potion, then activates the corresponding color and adds to the collisions detected counter.
@@ -20,14 +20,9 @@ public class MultiCollisionActivator : MonoBehaviour
     /// </summary>
     /// <param name="collision"></param>
 
-    void Start()
-    {
-        audioSource.SetActive(false);
-    }
-    
     public void OnCollisionEnter(Collision collision)
     {
-        int collisionsDetected = 0;
+        
 
         if(collision.gameObject.name == "Blue Potion")
         {
@@ -49,21 +44,10 @@ public class MultiCollisionActivator : MonoBehaviour
 
         if(collisionsDetected >= 2)
         {
-            if(blueFill.activeSelf == true)
-            {
-                blueFill.SetActive(false);
-            }
-            if(redFill.activeSelf == true)
-            {
-                redFill.SetActive(false);
-            }
-
-            if(smoke.activeSelf == true)
-            {
-                smoke.SetActive(false);
-            }
-
-            emptyCauldron.enabled = false;
+           blueFill.SetActive(false);
+           redFill.SetActive(false);
+           smoke.SetActive(false);
+           emptyCauldron.enabled = false;
             fullCauldron.enabled = true;
             audioSource.SetActive(true);
             paintBarrels.SetActive(true);
