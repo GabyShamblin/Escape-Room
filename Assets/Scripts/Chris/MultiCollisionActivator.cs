@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 
 /// <summary>
 /// Handles collision events between the potions and the cauldron
@@ -6,8 +7,10 @@ using UnityEngine;
 public class MultiCollisionActivator : MonoBehaviour
 {
     [SerializeField]protected GameObject paintBarrels;
+    [SerializeField]protected GameObject redPotion;
+    [SerializeField]protected GameObject bluePotion;
     [SerializeField]protected GameObject audioSource;
-     [SerializeField]protected GameObject smoke;
+    [SerializeField]protected GameObject smoke;
     [SerializeField]protected GameObject blankCauldron;
     [SerializeField]protected MeshRenderer redCauldron;
     [SerializeField]protected MeshRenderer blueCauldron;
@@ -22,9 +25,10 @@ public class MultiCollisionActivator : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "Blue Potion")
+        if(collision.gameObject == bluePotion)
         {
             collisionsDetected++;
+            bluePotion.SetActive(false);
             if(blueCauldron.enabled == false && redCauldron.enabled == false)
             {
                 blankCauldron.SetActive(false);
@@ -32,10 +36,11 @@ public class MultiCollisionActivator : MonoBehaviour
             }
         }
 
-        else if(collision.gameObject.name == "Red Potion")
+        else if(collision.gameObject == redPotion)
         {
             collisionsDetected++;
-            if(blueCauldron.enabled == false && redCauldron.enabled == false)
+            redPotion.SetActive(false);
+            if(redCauldron.enabled == false && blueCauldron.enabled == false)
             {
                 blankCauldron.SetActive(false);
                 redCauldron.enabled = true;

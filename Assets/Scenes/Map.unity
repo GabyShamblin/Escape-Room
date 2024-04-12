@@ -110531,6 +110531,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4123333812323193468, guid: 834dcb683c796ad40ad7f2b77f871529, type: 3}
+      propertyPath: redPotion
+      value: 
+      objectReference: {fileID: 8227194483287360499}
+    - target: {fileID: 4123333812323193468, guid: 834dcb683c796ad40ad7f2b77f871529, type: 3}
+      propertyPath: bluePotion
+      value: 
+      objectReference: {fileID: 8227194483287360498}
+    - target: {fileID: 4123333812323193468, guid: 834dcb683c796ad40ad7f2b77f871529, type: 3}
       propertyPath: paintBarrels
       value: 
       objectReference: {fileID: 85367416}
@@ -110543,6 +110551,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 834dcb683c796ad40ad7f2b77f871529, type: 3}
+--- !u!1 &8227194483287360498 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5727162870614105026, guid: 834dcb683c796ad40ad7f2b77f871529, type: 3}
+  m_PrefabInstance: {fileID: 8227194483287360497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8227194483287360499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6560934383619689845, guid: 834dcb683c796ad40ad7f2b77f871529, type: 3}
+  m_PrefabInstance: {fileID: 8227194483287360497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &8240802394834482205
 MeshFilter:
   m_ObjectHideFlags: 0
