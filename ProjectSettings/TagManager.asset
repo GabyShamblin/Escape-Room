@@ -8,6 +8,10 @@ TagManager:
   - Triangle
   - Star
   - Sphere
+  - Potions
+  - Cauldron
+  - SkyboxCamera
+  - Key
   layers:
   - Default
   - TransparentFX

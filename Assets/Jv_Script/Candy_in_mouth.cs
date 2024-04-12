@@ -13,6 +13,7 @@ public class CollisionRenderer : MonoBehaviour
     public GameObject Candy; // candy being inserted
     public GameObject Mouth; // mouth being inserted into
     public GameObject Lit_Skull; // The reward for the correct insertion
+    public AudioSource Sound; //sound for when candy is eaten
 
 
     private void OnTriggerEnter(Collider other)
@@ -20,10 +21,13 @@ public class CollisionRenderer : MonoBehaviour
 
         if (other.name == Mouth.name)
         {
+            Sound.Play(0);
             Mouth.SetActive(false);
             Lit_Skull.SetActive(true);
             Debug.Log("Correct Placement!");
-
+            Debug.Log("sound played!");
+            Destroy(Candy);
+            
         }
     }
 }

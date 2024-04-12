@@ -13,6 +13,7 @@ public class SkullViewInteractionController : MonoBehaviour
     public GameObject orangePaint;
     public Material newMaterial;
     public GameObject redTextCanvas;
+    public GameObject audio;
     private GameObject _skull;
     private bool _isSolved;
     /// <summary>
@@ -22,6 +23,7 @@ public class SkullViewInteractionController : MonoBehaviour
     {
         _skull = gameObject;
         _isSolved = false;
+        audio.SetActive(false);
     }
 
     /// <summary>
@@ -30,13 +32,14 @@ public class SkullViewInteractionController : MonoBehaviour
     void Update()
     {
         if (_isSolved) return;
-        if (_skull.GetComponent<Renderer>().sharedMaterial == orangePaint.GetComponent<Renderer>().sharedMaterial 
+        if (_skull.GetComponent<Renderer>().sharedMaterial == orangePaint.GetComponent<Renderer>().sharedMaterial
             && InteractionHandler.AreFacingEachOther(_skull, viewableObject))
         {
             encryptedCanvas.SetActive(false);
             decryptedCanvas.SetActive(false);
             cypherSolvedCanvas.SetActive(true);
             redTextCanvas.SetActive(true);
+            audio.SetActive(true);
             _isSolved = true;
         }
         else
