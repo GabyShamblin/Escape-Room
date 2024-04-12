@@ -14,12 +14,14 @@ public class Key_Reveal : MonoBehaviour
     public GameObject Candle_R;
     public GameObject Key;
     public GameObject Lantern;
+    private bool activated = false;
 
     void Update()
     {
-        if (Candle_L.activeSelf == true && Candle_M.activeSelf == true && Candle_R.activeSelf == true) { 
-        Key.SetActive(true);
-        Lantern.SetActive(true);
+        if (Candle_L.activeSelf == true && Candle_M.activeSelf == true && Candle_R.activeSelf == true && !activated) { 
+            Key.SetActive(true);
+            Lantern.SetActive(true);
+            activated = true;
         }
     }
 }

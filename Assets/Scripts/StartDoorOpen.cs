@@ -7,6 +7,8 @@ public class StartDoorOpen : MonoBehaviour
     [SerializeField] private bool open = false;
     [SerializeField] private bool basement = true;
     private Animator anim;
+    private AudioSource doorAudio;
+    private AudioSource keyAudio;
     [SerializeField] private GameObject key;
     [SerializeField] private Material key_mat;
 
@@ -21,7 +23,10 @@ public class StartDoorOpen : MonoBehaviour
         }
         if (key == null) {
             Debug.LogError("Key not found");
+        } else {
+            keyAudio = key.GetComponent<AudioSource>();
         }
+        doorAudio = GetComponent<AudioSource>();
     }
 
     /// <summary>
@@ -47,5 +52,7 @@ public class StartDoorOpen : MonoBehaviour
         } else {
             anim.Play("Base Layer.Exit_Open");
         }
+        keyAudio.Play();
+        doorAudio.Play();
     }
 }
