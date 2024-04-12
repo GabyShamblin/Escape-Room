@@ -2,36 +2,39 @@ using UnityEngine;
 
 /// <summary>
 /// Defines tag "Potions" and "Cauldron" and creates a counter that counts how often the potions collide with the cauldron.
-/// If 2 objects tagged "Potions" collide with the cauldron, spawn the paint barrels.
+/// If 2 objects tagged "Potions" collide with the cauldron, spawn the paint barrels, replace the empty cauldron with the full cauldron, and activate the audio clip.
 /// </summary>
 public class MultiCollisionActivator : MonoBehaviour
 {
-    [HideInInspector]public string collisionObjectTag = "Potions";
-    [HideInInspector]public string collisionTargetTag = "Cauldron";
+    [SerializeField]protected GameObject blueFill;
+    [SerializeField]protected GameObject redFill;
+    [SerializeField]protected GameObject paintBarrels;
+    [SerializeField]protected GameObject audioSource;
+    [SerializeField]protected MeshRenderer emptyCauldron;
+    [SerializeField]protected MeshRenderer fullCauldron;
 
-    private int collisionsDetected = 0;
-    public GameObject redPaintBarrel;
-
-    public GameObject orangePaintBarrel;
-
-    public GameObject greenPaintBarrel;
-
-    public GameObject bluePaintBarrel;
-    
-    //Activates an object when 3 or more collision objects collide with the target
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag(collisionObjectTag))
+        int collisionsDetected = 0;
+
+        if(collision.gameObject.name == "Blue Potion")
         {
             collisionsDetected++;
+            blueFill.SetActive(true);
         }
 
-        if (collisionsDetected >= 2)
+        else if(collision.gameObject.name == "Red Potion")
         {
-            redPaintBarrel.SetActive(true);
-            orangePaintBarrel.SetActive(true);
-            greenPaintBarrel.SetActive(true);
-            bluePaintBarrel.SetActive(true);
+            collisionsDetected++;
+            redFill.SetActive(true);
+        }
+
+        if(collisionsDetected >= 2)
+        {
+            emptyCauldron.enabled = false;
+            fullCauldron.enabled = true;
+            audioSource.SetActive(true);
+            paintBarrels.SetActive(true);
         }
     }
 }
