@@ -9,14 +9,22 @@ public class MultiCollisionActivator : MonoBehaviour
     [SerializeField]protected GameObject redFill;
     [SerializeField]protected GameObject paintBarrels;
     [SerializeField]protected GameObject audioSource;
+     [SerializeField]protected GameObject smoke;
     [SerializeField]protected MeshRenderer emptyCauldron;
     [SerializeField]protected MeshRenderer fullCauldron;
+   
 
     /// <summary>
     /// Checks to see if the item colliding with the cauldron is the red or blue potion, then activates the corresponding color and adds to the collisions detected counter.
     /// Once the counter reaches 2, the cauldron switches to the full purple cauldron, and the victory sound and paint barrels get activated. 
     /// </summary>
     /// <param name="collision"></param>
+
+    void Start()
+    {
+        audioSource.SetActive(false);
+    }
+    
     public void OnCollisionEnter(Collision collision)
     {
         int collisionsDetected = 0;
@@ -41,8 +49,20 @@ public class MultiCollisionActivator : MonoBehaviour
 
         if(collisionsDetected >= 2)
         {
-            blueFill.SetActive(false);
-            redFill.SetActive(false);
+            if(blueFill.activeSelf == true)
+            {
+                blueFill.SetActive(false);
+            }
+            if(redFill.activeSelf == true)
+            {
+                redFill.SetActive(false);
+            }
+
+            if(smoke.activeSelf == true)
+            {
+                smoke.SetActive(false);
+            }
+
             emptyCauldron.enabled = false;
             fullCauldron.enabled = true;
             audioSource.SetActive(true);
