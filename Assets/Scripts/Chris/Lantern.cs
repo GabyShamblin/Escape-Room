@@ -3,31 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Creates functionality for turning the flashlight on and off using Unity's Event system and the XR Grab Interactable Component
+/// Defines methods for 
 /// </summary>
 public class Lantern : MonoBehaviour
 {
-    public GameObject _light;
-    private Light light;
+    public GameObject lightSource;
+    protected Light _light;
 
-    //Finds light component
+    /// <summary>
+    /// Sets light component
+    /// </summary>
     void Start()
     {
-        light = _light.GetComponent<Light>();
+        _light = lightSource.GetComponent<Light>();
     }
 
-    //Turns light on
+    /// <summary>
+    /// Turns light on, returns light source to original position
+    /// </summary>
     public void LightOn()
     {
-        light.enabled = true;
-        _light.transform.position= new Vector3(0f, -0.322f, 0f);
+        _light.enabled = true;
+        lightSource.transform.position= new Vector3(0f, -0.322f, 0f);
     }
 
-    //Turns light off
+    /// <summary>
+    /// Turns light off, sends light source away (was having a bug where light would reveal disappearing material even if not turned on)
+    /// </summary>
     public void LightOff()
     {
-        light.enabled = false;
-        _light.transform.position = new Vector3(0f, 1000f, 0f);
+        _light.enabled = false;
+        lightSource.transform.position = new Vector3(0f, 1000f, 0f);
         
     }
 
