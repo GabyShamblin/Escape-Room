@@ -7,12 +7,12 @@
 public class Reveal : MonoBehaviour
 {
     [SerializeField] Material Mat;
-    [SerializeField] Light SpotLight;
+    [SerializeField] Light PointLight;
 	
 	void Update ()
     {
-        Mat.SetVector("MyLightPosition",  SpotLight.transform.position);
-        Mat.SetVector("MyLightDirection", -SpotLight.transform.forward );
-        Mat.SetFloat ("MyLightAngle", SpotLight.spotAngle         );
+        Mat.SetVector("MyLightPosition",  PointLight.transform.position);
+        Mat.SetVector("MyLightDirection", -PointLight.transform.forward );
+        Mat.SetFloat ("MyLightAngle", PointLight.spotAngle         );
     }
 }

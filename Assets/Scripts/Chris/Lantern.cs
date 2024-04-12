@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 
 /// <summary>
@@ -7,15 +8,15 @@ using UnityEngine;
 /// </summary>
 public class Lantern : MonoBehaviour
 {
-    public GameObject lightSource;
-    protected Light _light;
+    public GameObject _lantern;
+    protected GameObject _spotlight;
 
     /// <summary>
     /// Sets light component
     /// </summary>
     void Start()
     {
-        _light = lightSource.GetComponent<Light>();
+        _spotlight = _lantern.GetNamedChild("Spotlight");
     }
 
     /// <summary>
@@ -23,8 +24,8 @@ public class Lantern : MonoBehaviour
     /// </summary>
     public void LightOn()
     {
-        _light.enabled = true;
-        lightSource.transform.position= new Vector3(0f, -0.322f, 0f);
+        _spotlight.transform.position = new Vector3(0f, -0.3f, 0f);
+        _spotlight.SetActive(true);
     }
 
     /// <summary>
@@ -32,8 +33,8 @@ public class Lantern : MonoBehaviour
     /// </summary>
     public void LightOff()
     {
-        _light.enabled = false;
-        lightSource.transform.position = new Vector3(0f, 1000f, 0f);
+        _spotlight.SetActive(false);
+        _spotlight.transform.position = new Vector3(0f, 1000f, 0f);
         
     }
 

@@ -30,11 +30,7 @@ public class ExtendedFlycam : MonoBehaviour
 	private float rotationX = 0.0f;
 	private float rotationY = 0.0f;
 
-	void Start ()
-	{
-		Screen.lockCursor = true;
-	}
-
+	
 	void Update ()
 	{
 		rotationX += Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime;

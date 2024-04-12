@@ -5,13 +5,13 @@ using UnityEngine;
 /// </summary>
 public class MultiCollisionActivator : MonoBehaviour
 {
-    [SerializeField]protected GameObject blueFill;
-    [SerializeField]protected GameObject redFill;
     [SerializeField]protected GameObject paintBarrels;
     [SerializeField]protected GameObject audioSource;
      [SerializeField]protected GameObject smoke;
-    [SerializeField]protected MeshRenderer emptyCauldron;
-    [SerializeField]protected MeshRenderer fullCauldron;
+    [SerializeField]protected GameObject blankCauldron;
+    [SerializeField]protected MeshRenderer redCauldron;
+    [SerializeField]protected MeshRenderer blueCauldron;
+    [SerializeField]protected MeshRenderer purpleCauldron;
     protected int collisionsDetected = 0;
 
     /// <summary>
@@ -22,35 +22,35 @@ public class MultiCollisionActivator : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        
-
         if(collision.gameObject.name == "Blue Potion")
         {
             collisionsDetected++;
-            if(blueFill.activeSelf == false && redFill.activeSelf == false)
+            if(blueCauldron.enabled == false && redCauldron.enabled == false)
             {
-                blueFill.SetActive(true);
+                blankCauldron.SetActive(false);
+                blueCauldron.enabled = true;
             }
         }
 
         else if(collision.gameObject.name == "Red Potion")
         {
             collisionsDetected++;
-            if(redFill.activeSelf == false && blueFill.activeSelf == false)
+            if(blueCauldron.enabled == false && redCauldron.enabled == false)
             {
-                redFill.SetActive(true);
+                blankCauldron.SetActive(false);
+                redCauldron.enabled = true;
             }
         }
 
         if(collisionsDetected >= 2)
         {
-           blueFill.SetActive(false);
-           redFill.SetActive(false);
-           smoke.SetActive(false);
-           emptyCauldron.enabled = false;
-            fullCauldron.enabled = true;
+            blankCauldron.SetActive(false);
+            blueCauldron.enabled = false;
+            redCauldron.enabled = false;
+            purpleCauldron.enabled = true;
             audioSource.SetActive(true);
             paintBarrels.SetActive(true);
+            smoke.SetActive(false);
         }
     }
 }
