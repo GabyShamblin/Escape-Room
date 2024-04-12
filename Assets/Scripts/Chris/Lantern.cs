@@ -7,27 +7,24 @@ using UnityEngine;
 /// </summary>
 public class Lantern : MonoBehaviour
 {
-    public GameObject _light;
-    private Light light;
+    private Light _light;
 
     //Finds light component
     void Start()
     {
-        light = _light.GetComponent<Light>();
+        _light = GetComponentInChildren<Light>();
     }
 
     //Turns light on
     public void LightOn()
     {
-        light.enabled = true;
-        _light.transform.position= new Vector3(0f, -0.322f, 0f);
+        _light.enabled = true;
     }
 
     //Turns light off
     public void LightOff()
     {
-        light.enabled = false;
-        _light.transform.position = new Vector3(0f, 1000f, 0f);
+        _light.enabled = false;
         
     }
 
