@@ -5,15 +5,15 @@ using UnityEngine;
 public class LightsOfftoOn : MonoBehaviour
 {
     // Reference to the parent GameObject containing the lights
-    [SerializeField] GameObject _lightParent;
-    public AudioSource audioSource;
-    public AudioClip audioClip;
+    public GameObject lightParent;
+    public GameObject audioSource;
+    //public AudioClip audioClip;
 
     void Start()
     {
         // Deactivate the parent GameObject containing the lights when the game starts
-        _lightParent.SetActive(false);
-        //audioSource.SetActive(false);
+        lightParent.SetActive(false);
+        audioSource.SetActive(false);
 
     }
 
@@ -26,9 +26,9 @@ public class LightsOfftoOn : MonoBehaviour
             // Outputting a debug message indicating that a collision is happening
             Debug.Log("Collision is happening.");
             // Activate the parent GameObject containing the lights
-            _lightParent.SetActive(true);
-            audioSource.PlayOneShot(audioClip);
-            //audioSource.SetActive(true);
+            lightParent.SetActive(true);
+            //audioSource.PlayOneShot(audioClip);
+            audioSource.SetActive(true);
         }
         else
         {
