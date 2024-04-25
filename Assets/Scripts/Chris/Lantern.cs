@@ -9,15 +9,9 @@ using UnityEngine;
 public class Lantern : MonoBehaviour
 {
     public GameObject _lantern;
-    protected GameObject _spotlight;
+    public GameObject _spotlight;
 
-    /// <summary>
-    /// Sets light component
-    /// </summary>
-    void Start()
-    {
-        _spotlight = _lantern.GetNamedChild("Spotlight");
-    }
+    
 
     /// <summary>
     /// Turns light on, returns light source to original position
